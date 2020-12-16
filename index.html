@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+    <link rel="icon" href="Favicon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script>
+ function validate(){
+  var fname = document.getElementById("FirstName").value;
+  var mname = document.getElementById("MiddleName").value;
+  var lname = document.getElementById("LastName").value;
+  
+  var contactnumber = document.getElementById("ContactNumber").value;
+  var email = document.getElementById("EmailAddress").value;
+  var user = document.getElementById("Username").value;
+  var pass = document.getElementById("Password").value;
+  var cpass = document.getElementById("ConfirmPassword").value;
+  var error_message = document.getElementById("error_message");
+
+
+  if(fname.length < 5){
+    alert("Please Enter valid first name");
+    return false;
+  }
+  if(mname.length < 5){
+    alert("Please Enter valid middle name");
+    return false;
+  }
+  if(lname.length < 5){
+    alert("Please Enter valid last name");
+    return false;
+  }
+  if(contactnumber.length != 11){
+    alert("Please Enter correct contact number");
+    return false;
+  }
+  if(email.indexOf("@") == -1 || email.length < 5){
+    alert("Please Enter correct email");
+    return false;
+  }
+  if(user.length < 5){
+    alert("Please Enter valid username");
+    return false;
+  }
+  if(pass.length < 5){
+    alert("password should not be less than 5 characters");
+    return false;
+  }
+  if(pass != cpass){
+    alert("Password should match");
+    return false;
+  }
+  alert("Form Submitted Successfully!");
+  return true;
+}
+</script>
+
+<title>Form</title>
+</head>
+<body>
+<main class="myform">
+    <div class="cotainer"> 
+    <div class="row justify-content-center">
+  <div class="col-md-8">
+ <div class="card">
+     <div class="card-header" style="text-align: center; font-size: 2em; color: white; background: #800000;">Registration Form</div>
+     <div class="card-body" style="background: #008080;">
+             <div class="form-group row">
+                 <label for="First Name" class="col-md-4 col-form-label text-md-right" style="color: white;">First Name</label>
+                <div class="col-md-6">
+                      <input type="text" id="FirstName" class="form-control" name="FirstName" placeholder="Enter First Name">
+                 </div>
+             </div>
+
+             <div class="form-group row">
+                 <label for="Middle Name" class="col-md-4 col-form-label text-md-right" style="color: white;">Middle Name</label>
+                 <div class="col-md-6">
+                     <input type="text" id="MiddleName" class="form-control" name="MiddleName" placeholder="Enter Middle Name">
+                 </div>
+             </div>
+
+                    <div class="form-group row">
+                 <label for="Last Name" class="col-md-4 col-form-label text-md-right" style="color: white;">Last Name</label>
+                    <div class="col-md-6">
+                     <input type="text" id="LastName" class="form-control" name="LastName" placeholder="Enter Last Name">
+                 </div>
+             </div>
+
+					<div class="form-group row">
+                 <label for="Contact Number" class="col-md-4 col-form-label text-md-right" style="color: white;">Contact Number</label>
+                 <div class="col-md-6">
+                     <input type="text" id="ContactNumber" class="form-control" name="ContactNumber" placeholder="Enter Contact Number">
+                 </div>
+             </div>
+
+             <div class="form-group row">
+                 <label for="Email Address" class="col-md-4 col-form-label text-md-right" style="color: white;">Email Address</label>
+                 <div class="col-md-6">
+                     <input type="text" id="EmailAddress" class="form-control" name="EmailAddress" placeholder="Enter Email Address">
+                 </div>
+             </div>
+
+             <div class="form-group row">
+                 <label for="Username" class="col-md-4 col-form-label text-md-right" style="color: white;">Username</label>
+                 <div class="col-md-6">
+                     <input type="text" id="Username" class="form-control" name="Username" placeholder="Enter UserName">
+                 </div>
+             </div>
+
+             <div class="form-group row">
+                 <label for="Password" class="col-md-4 col-form-label text-md-right" style="color: white;">Password</label>
+                 <div class="col-md-6">
+                     <input type="text" id="Password" class="form-control" name=Password placeholder="Enter Password">
+                 </div>
+             </div>
+
+             <div class="form-group row">
+                 <label for="ConfimPassword" class="col-md-4 col-form-label text-md-right" style="color: white;">Confirm Password</label>
+                 <div class="col-md-6">
+                     <input type="text" id="ConfirmPassword" class="form-control" name="ConfirmPassword" placeholder="Confirm Password">
+                 </div>
+             </div>
+
+                     <div class="col-md-6 offset-md-4">
+                     <button type="submit" class="btn btn-success btn-block" onclick="validate()">
+                     Register
+                     </button>
+                 </div>
+             </div>
+         </form>
+     </div>
+  </div>
+  </div>
+  </div>
+ </div>
+</main>
+</body>
+</html>
